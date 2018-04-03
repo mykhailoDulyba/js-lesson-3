@@ -8,16 +8,11 @@ let value2;
 let operationType;
 document.querySelectorAll('.Number')
     .forEach(el => el.addEventListener('click', clickedNum));
-
 function clickedNum(e) {
     const number = e.target.dataset.num;
     numberFunction(number);
 }
-
 function numberFunction(numb) {
-    if (display.value) {
-        display.value = '';
-    }
     prn(numb);
 }
 document.querySelectorAll('.operation')
@@ -27,51 +22,21 @@ function clickedOper(e) {
     operationType = e.target.dataset.oper
     opperation(operationType);
 }
-
 function opperation(operationType) {
-    value1 = +(display.value);
-    if (value1 > 0) {
-        console.log(value1);
-        display.value = '';
-    }
-    prn(operationType);
+    value1 = display.value;
+    display.value = '';
 }
-
 function clickedRezult(e) {
     value2 = display.value;
     display.value = '';
-    if (value2 > 0) {
-        let counted = eval(value1 + operationType + value2);
-        prn(counted);
-    }
-    else { prn('Enter number') }
+    let counted = eval(value1 + operationType + value2);
+    prn(counted);
 }
-
 function clickedClear() {
     display.value = '';
 }
-
 function prn(arg) {
-    let dis = display.value += arg;
-    return dis.innerHTML;
+    let calcDisplay = display.value += arg;
+    return calcDisplay.innerHTML;
 }
 
-
-// function opperation(operationType) {
-//      value1= +(display.value);
-//      if(value1>0){
-//          console.log(value1);
-//          display.value = '';
-//      }else {
-//          prn(operationType)
-//     }
-// }
-
-// function opperation(operationType) {
-//      value1= +(display.value);
-//      if(value1>0){
-//          console.log(value1);
-//          display.value = '';
-//      }prn(operationType)
-//     }
-// }
