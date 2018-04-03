@@ -46,3 +46,8 @@ function prn(arg) {
     return calcDisplay.innerHTML;
 }
 
+// function numberFunction(numb) {
+//     if(display.value === '0'){
+//         display.value = numb; 
+//     }prn(numb);
+// }
