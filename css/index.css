@@ -1,0 +1,35 @@
+.calculator{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    max-width: 350px;
+    margin: auto;
+    grid-gap:10px;
+    box-shadow: rgba(0, 0, 0, 0.13) 0px 0px 30px;
+    padding: 8px;
+}
+#display, #point, .number_0, .operation, .number{
+     background-color: #fff;
+     font-size: 20px;
+     padding:20px;
+     box-shadow: rgba(0, 0, 0, 0.13) 0px 0px 30px;
+}
+#display{
+    grid-column: 1/5;
+}
+.number_0{
+     grid-column: 1/3;
+}
+#result{
+    grid-column: 1/3;
+    background-color: green;
+     font-size: 28px;
+     color: #fff;
+     padding: 8px;
+}
+#clear{
+    grid-column: 3/5;
+    background-color: #E14E4E;
+     font-size: 28px;
+     color: #fff;
+     
+}

@@ -3,10 +3,12 @@ let result = document.getElementById('result');
 result.addEventListener('click', clickedRezult);
 let clear = document.getElementById('clear');
 clear.addEventListener('click', clickedClear);
+let point = document.getElementById('point');
+point.addEventListener('click', clickedPoint);
 let value1;
 let value2;
 let operationType;
-document.querySelectorAll('.Number')
+document.querySelectorAll('.number')
     .forEach(el => el.addEventListener('click', clickedNum));
 function clickedNum(e) {
     const number = e.target.dataset.num;
@@ -19,7 +21,7 @@ document.querySelectorAll('.operation')
     .forEach(el => el.addEventListener('click', clickedOper));
 
 function clickedOper(e) {
-    operationType = e.target.dataset.oper
+    operationType = e.target.dataset.oper;
     opperation(operationType);
 }
 function opperation(operationType) {
@@ -32,8 +34,12 @@ function clickedRezult(e) {
     let counted = eval(value1 + operationType + value2);
     prn(counted);
 }
-function clickedClear() {
+function clickedClear(e) {
     display.value = '';
+}
+function clickedPoint(e){
+    let getPoint = e.target.dataset.point;
+    prn(getPoint);
 }
 function prn(arg) {
     let calcDisplay = display.value += arg;
