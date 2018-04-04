@@ -14,8 +14,8 @@ function clickedNum(e) {
     const number = e.target.dataset.num;
     numberFunction(number);
 }
-function numberFunction(numb) {
-    prn(numb);
+function numberFunction(someNumber) {
+    prn(someNumber);
 }
 document.querySelectorAll('.operation')
     .forEach(el => el.addEventListener('click', clickedOper));
